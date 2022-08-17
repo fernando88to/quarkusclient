@@ -4,8 +4,8 @@ import java.io.Serializable;
 import java.util.List;
 
 public class ArquivoPDFRedis implements Serializable {
-    private Integer totalPaginas;
-    private List<String> paginas;
+    public Integer totalPaginas;
+    public List<String> paginas;
 
     public ArquivoPDFRedis(Integer totalPaginas, List<String> paginas) {
         this.totalPaginas = totalPaginas;
@@ -13,21 +13,5 @@ public class ArquivoPDFRedis implements Serializable {
     }
 
     public ArquivoPDFRedis() {
-    }
-
-    public Integer getTotalPaginas() {
-        return totalPaginas;
-    }
-
-    public void setTotalPaginas(Integer totalPaginas) {
-        this.totalPaginas = totalPaginas;
-    }
-
-    public List<String> getPaginas() {
-        return paginas;
-    }
-
-    public void setPaginas(List<String> paginas) {
-        this.paginas = paginas;
     }
 }
