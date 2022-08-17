@@ -35,7 +35,7 @@ public class ClienteResource {
     @Path("/salvar2")
     @Produces(MediaType.TEXT_PLAIN)
     public String salvarComExpiracao() {
-        myRedisCacheService.set("x", 5,
+        myRedisCacheService.set("x", 10L,
                 new ArquivoPDFRedis(5, Arrays.asList("a", "b", "sfsdfsd", "sdfsdf")));
         return "Salvou no redis por alguns segundos";
     }
@@ -44,8 +44,7 @@ public class ClienteResource {
     @Path("/pegar")
     public ArquivoPDFRedis pegar() {
         Optional<ArquivoPDFRedis> arquivoPDFRedis = myRedisCacheService.get("x");
-        //retorna http 200 se tiver o dado e 204 se não tiver o dado
-        return arquivoPDFRedis.orElse(null);
+        return arquivoPDFRedis.orElse(new ArquivoPDFRedis());
     }
 
 }

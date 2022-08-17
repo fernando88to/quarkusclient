@@ -23,6 +23,6 @@ public class MyRedisCacheService {
         commands.set(key, bo);
     }
     public void set(String key, long segundos , ArquivoPDFRedis bo) {
-        commands.setex(key, segundos, bo); // Expira depois de 5 segundos
+        commands.setex(key, segundos, bo); // Expira depois x segundos
     }
 }
