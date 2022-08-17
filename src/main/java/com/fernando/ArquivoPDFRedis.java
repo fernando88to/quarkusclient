@@ -3,13 +3,16 @@ package com.fernando;
 import java.io.Serializable;
 import java.util.List;
 
-public class BusinessObject implements Serializable {
+public class ArquivoPDFRedis implements Serializable {
     private Integer totalPaginas;
     private List<String> paginas;
 
-    public BusinessObject(Integer totalPaginas, List<String> paginas) {
+    public ArquivoPDFRedis(Integer totalPaginas, List<String> paginas) {
         this.totalPaginas = totalPaginas;
         this.paginas = paginas;
+    }
+
+    public ArquivoPDFRedis() {
     }
 
     public Integer getTotalPaginas() {
